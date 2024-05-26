@@ -1,0 +1,22 @@
+### GET all trips
+GET https://localhost:5001/api/trips
+
+###
+
+### DELETE a client
+# Replace {idClient} with the actual client ID you want to delete
+DELETE https://localhost:5001/api/clients/{idClient}
+
+###
+
+### POST assign a client to a trip
+# Replace {idTrip} with the actual trip ID you want to assign a client to
+POST https://localhost:5001/api/trips/{idTrip}/clients
+Content-Type: application/json
+
+{
+  "pesel": "12345678901",
+  "firstName": "John",
+  "lastName": "Doe",
+  "paymentDate": "2024-01-01T00:00:00"
+}
